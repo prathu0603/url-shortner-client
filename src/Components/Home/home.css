@@ -1,0 +1,37 @@
+.homePage {
+  background-color: rgb(99, 214, 54);
+  height: 100vh;
+}
+.logoutButton {
+  background-color: #e74707;
+  border: none;
+  border-radius: 5px;
+  color: rgb(18, 12, 46);
+  padding: 16px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: cursive;
+  font-weight: bold;
+}
+h2 {
+  color: #86143b;
+  text-shadow: 2px 2px black;
+  font-size: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
