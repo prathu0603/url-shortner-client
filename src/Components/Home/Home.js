@@ -45,12 +45,15 @@ const Home = () => {
     callHome();
   }, []);
 
-  console.log(tableData.urlData);
+  console.log(tableData._id);
 
   const GenerateUrl = async (e) => {
     e.preventDefault();
     // Get User Id From Cookies
-    const id = Cookies.get("id").split(":")[1].replace(/['"]+/g, "");
+    // const id = Cookies.get("id").split(":")[1].replace(/['"]+/g, "");
+    const id = tableData._id;
+
+    // console.log(tableData._id);
     if (!longUrl) {
       toast.warn("Fill the Url", {
         position: "top-right",
@@ -162,15 +165,17 @@ const Home = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {tableData.urlData.map(({ date, longUrl, shortUrl }) => (
-                      <tr>
-                        <td>{i}</td>
-                        <td>{date}</td>
-                        <td>{shortUrl}</td>
-                        <td>{longUrl}</td>
-                        {(i = i + 1)}
-                      </tr>
-                    ))}
+                    {tableData.urlData.map(
+                      ({ _id, date, longUrl, shortUrl }) => (
+                        <tr key={_id}>
+                          <td>{i}</td>
+                          <td>{date}</td>
+                          <td>{shortUrl}</td>
+                          <td>{longUrl}</td>
+                          {(i = i + 1)}
+                        </tr>
+                      )
+                    )}
                   </tbody>
                 </Table>
               </>
